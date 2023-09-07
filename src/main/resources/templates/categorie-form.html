@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<title>Ajout d'une Catégorie</title>
+		 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="text-center text-primary mt-3">Ajout d'une catégories</h1>			
+			
+			<form method="POST"  th:action="@{insert}">
+				<div class="form-group">
+			      <label for="txtIdCat" class="form-label mt-4">ID CAT</label>
+			      <input type="text" name="idCat" class="form-control" id="txtIdCat" readonly th:value="${cat.idCat}">
+			    </div>
+			    
+			    <div class="form-group">
+			      <label for="txtNomCat" class="form-label mt-4">NOM CAT</label>
+			      <input type="text" name="nomCat" class="form-control" id="txtNomCat" th:value="${cat.nomCat}">
+			    </div>
+			
+				<input type="submit" value="Sauvegarder" 
+					class="btn btn-success mt-3"
+				>
+			</form>
+			
+		</div>
+		 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+	</body>
+</html>
